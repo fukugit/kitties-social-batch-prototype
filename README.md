@@ -1,4 +1,5 @@
 # kitties-social-batch-prototype
+This batch processes image files, converting them into structured Data objects for analysis.  
 
 ## 📝 Prerequisites
 ```
