@@ -14,8 +14,17 @@ or
 pipenv install
 ```
 
-## 🚀 Run
+## 🚀 Run Main Script
 ```
+pipenv shell
 pipenv run start
 ```
+
+## 🚀 Run Pytest
+```
+pipenv shell
+pipenv run pytest tests/app/utils/test_csv_util.py
+```
+
+
 
