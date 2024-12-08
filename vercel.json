@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "app/*.py": {
+      "runtime": "vercel-python@latest",
+      "entrypoint": "run"
+    }
+  }
+}

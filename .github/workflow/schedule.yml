@@ -1,0 +1,12 @@
+name: Trigger Vercel Function
+
+on:
+  schedule:
+    - cron: "0 * * * *" # 毎時 0 分に実行
+
+jobs:
+  trigger-function:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Vercel Function
+        run: curl -X GET https://kitties-social-batch.vercel.app/app/main
