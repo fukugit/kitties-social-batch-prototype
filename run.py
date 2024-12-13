@@ -1,5 +1,5 @@
-from app import main
+from app import app
 import sys
 
 if __name__ == '__main__':
-    sys.exit(main.run())
+    sys.exit(app.run())
