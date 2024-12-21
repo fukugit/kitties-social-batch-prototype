@@ -21,6 +21,16 @@ def index():
     logger.info("=============== / end =================")
     return jsonify(page)
 
+@main_bp.route('/cron')
+def cron():
+    page = {
+        'cron': "success",
+    }
+    logger = setup_logger()
+    logger.info("=============== /cron start =================")
+    logger.info("=============== /cron end =================")
+    return jsonify(page)
+
 @main_bp.route('/cat')
 def get_cat():
   """
