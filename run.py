@@ -1,5 +1,9 @@
-from app import app
-import sys
+from flask import Flask, jsonify
+from app import create_app
+# from flask_cors import CORS
+
+app = create_app()
+# CORS(app)
 
 if __name__ == '__main__':
-    sys.exit(app.run())
+    app.run(debug=True)

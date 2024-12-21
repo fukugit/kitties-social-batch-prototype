@@ -7,7 +7,22 @@ import pandas as pd
 from app.logger_setup import setup_logger
 from app.utils.csv_util import CsvUtil
 
-def run():
+from flask import Blueprint, jsonify
+
+main_bp = Blueprint('main', __name__)
+
+@main_bp.route('/')
+def index():
+    page = {
+        'ping': "success",
+    }
+    logger = setup_logger()
+    logger.info("=============== / start =================")
+    logger.info("=============== / end =================")
+    return jsonify(page)
+
+@main_bp.route('/cat')
+def get_cat():
   """
   This is the main function.
 
@@ -35,4 +50,7 @@ def run():
   logger.info("See the file below. It contains cats data.")
   logger.info("File: ./csv/cats_data.csv")
   logger.info("=============== main end =================")
-
+  page = {
+      'result': "success"
+  }
+  return jsonify(page)
